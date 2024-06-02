@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfimerija</title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Pocetna</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="Onama.html">O nama</a></li>
+        </ul>
+    </nav>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-wrapper">
+            <h1 class="hero-heading">Parfimerija</h1>
+            <p class="hero-text">Najveci izbor parfema</p>
+            </div>
+        <div class="image-wrapper">
+            <img id="myImage" src="image1.jpg" alt="slika">
+            </div>
+            <script>
+        
+                document.getElementById("myImage").addEventListener("click", function() {
+                    var image = document.getElementById("myImage");
+                    if (image.src.includes("image1.jpg")) {
+                        image.src = "image2.jpg"; 
+                    } else {
+                        image.src = "image1.jpg";
+                    }
+                });
+            </script>
+        </div>
+    </section>
+    <section class="">
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact-form">
+                <h2>Kontaktirajte nas</h2>
+                <form id="form">
+                    <label for="name">Ime:</label>
+                    <input type="text" id="name" name="Ime" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Poruka:</label>
+                    <textarea id="message" name="Poruka" rows="4" required></textarea>
+
+                    <button type="submit">Posalji</button>
+                </form>
+            </div>
+            <div id="map" class="map"></div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            if (name && email && message) {
+                alert('Uspesno ste poslali poruku!!!');
+                document.getElementById('contactForm').reset();
+            } 
+        });
+    </script>
+</body>
+</html>

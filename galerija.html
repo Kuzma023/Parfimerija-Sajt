@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfimerija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Pocetna</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="Onama.html">O nama</a></li>
+        </ul>
+    </nav>
+
+    <section class="galerija">
+        <div class="parfem">
+            <img class="galery-image" src="slike/parfem1.webp" alt="parfem1">
+            <h3>Xerjoff Naxos</h3>
+            <div class="checkbox-container">
+                <label for="checkbox1">50ml</label>
+                <input type="checkbox" id="checkbox1">
+            </div>
+
+            <div class="checkbox-container">
+                <label for="checkbox2">100ml</label>
+                <input type="checkbox" id="checkbox2">
+            </div>
+
+            <button id="showMessagesButton">Izaberi kolicinu</button>
+
+            <p id="message1" class="message">Izabrali ste 50ml parfema</p>
+            <p id="message2" class="message">Izabrali ste 100ml parfema</p>
+        </div>
+
+        <div class="parfem">
+            <img class="galery-image" src="slike/parfem2.webp" alt="parfem2">
+            <h3>Acqua di Gio</h3>
+            <div class="checkbox-container">
+                <label for="checkbox1">50ml</label>
+                <input type="checkbox" id="checkbox12">
+            </div>
+
+            <div class="checkbox-container">
+                <label for="checkbox2">100ml</label>
+                <input type="checkbox" id="checkbox22">
+            </div>
+
+            <button id="showMessagesButton2">Izaberi kolicinu</button>
+
+            <p id="message12" class="message">Izabrali ste 50ml parfema</p>
+            <p id="message22" class="message">Izabrali ste 100ml parfema</p>
+        </div>
+
+        <div class="parfem">
+            <img class="galery-image" src="slike/parfem3.webp" alt="parfem3">
+            <div class="checkbox-container">
+                <label for="checkbox1">50ml</label>
+                <input type="checkbox" id="checkbox13">
+            </div>
+
+            <div class="checkbox-container">
+                <label for="checkbox2">100ml</label>
+                <input type="checkbox" id="checkbox23">
+            </div>
+
+            <button id="showMessagesButton3">Izaberi kolicinu</button>
+
+            <p id="message13" class="message">Izabrali ste 50ml parfema</p>
+            <p id="message23" class="message">Izabrali ste 100ml parfema</p>
+        </div>
+        <script>
+            function showMessages() {
+                var checkbox1 = document.getElementById("checkbox1");
+                var checkbox2 = document.getElementById("checkbox2");
+                var message1 = document.getElementById("message1");
+                var message2 = document.getElementById("message2");
+
+
+                message1.style.display = checkbox1.checked ? "block" : "none";
+                message2.style.display = checkbox2.checked ? "block" : "none";
+            }
+
+            document.getElementById("showMessagesButton").addEventListener("click", showMessages);
+        </script>
+
+        <script>
+            function showMessages() {
+                var checkbox1 = document.getElementById("checkbox12");
+                var checkbox2 = document.getElementById("checkbox22");
+                var message1 = document.getElementById("message12");
+                var message2 = document.getElementById("message22");
+
+
+                message1.style.display = checkbox1.checked ? "block" : "none";
+                message2.style.display = checkbox2.checked ? "block" : "none";
+            }
+
+            document.getElementById("showMessagesButton2").addEventListener("click", showMessages);
+        </script>
+
+        <script>
+            function showMessages() {
+                var checkbox1 = document.getElementById("checkbox13");
+                var checkbox2 = document.getElementById("checkbox23");
+                var message1 = document.getElementById("message13");
+                var message2 = document.getElementById("message23");
+
+
+                message1.style.display = checkbox1.checked ? "block" : "none";
+                message2.style.display = checkbox2.checked ? "block" : "none";
+            }
+
+            document.getElementById("showMessagesButton3").addEventListener("click", showMessages);
+        </script>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact-form">
+                <h2>Kontaktirajte nas</h2>
+                <form>
+                    <label for="name">Ime:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Poruka:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Posalji</button>
+                </form>
+            </div>
+            <div id="map" class="map"></div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
